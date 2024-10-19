@@ -4,7 +4,7 @@
   },
   "scripts": {
     "start": "reveal-md content/ -w",
-    "build": "rm -rf docs && reveal-md content/ --static docs --static-dirs=content/attachment",
+    "build": "rm -rf docs && reveal-md content/ --static docs --static-dirs=content/attachment && cp content/index.html docs/index.html && cp content/index-styles.css docs/index-styles.css",
     "pdf": "reveal-md content/class-1-intro.md --print slides.pdf"
   }
 }
