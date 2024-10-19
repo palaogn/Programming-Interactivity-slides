@@ -1,0 +1,41 @@
+body {
+  background-color: #523996;
+  color: white;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 40px 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  padding: 40px;
+}
+
+footer {
+  padding: 40px;
+}
