@@ -277,7 +277,7 @@ This is becoming even more important.
 
 ### SVG
 ``` html
-<img src="/logo.svg" alt="This is a logo">
+
 ```
 
 ---
