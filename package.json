@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "reveal-md": "^6.1.3"
+  },
+  "scripts": {
+    "start": "reveal-md content/ -w",
+    "build": "reveal-md content/ --static docs --static-dirs=content/attachments",
+    "thema": "reveal-md content/class1.md --theme solarized",
+    "pdf": "reveal-md content/class-1-intro.md --print slides.pdf"
+  }
+}

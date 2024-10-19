@@ -1,0 +1,8 @@
+{
+  "separator": "\n---\n",
+  "verticalSeparator": "\n---v\n",
+  "theme": "solarized",
+  "revealOptions": {
+    "transition": "none"
+  }
+}
