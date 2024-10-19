@@ -1,113 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-    <title>reveal-md</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./dist/reset.css" />
-    <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming Interactivity</title>
+    <link rel="stylesheet" href="index-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="reveal">
-      <div class="slides">
-        <section data-markdown data-separator="\n---\n" data-separator-vertical="\n---v\n">
-          <textarea data-template>
-            # Welcome to My Presentations
+    <header>
+      <h1>Programming Interactivity</h1>
+    </header>
 
-Explore my presentations below:
+    <main>
+      <h2>Slides:</h2>
+      <a href="class-1-intro.md"
+        >Class 1: Introduction to Programming Interactivity</a
+      >
+      <a href="class-2-HTML.md">Class 2: HTML</a>
+      <a href="class-3-CSS-fundamentals.md">Class 3: CSS styling</a>
+      <a href="class-4-responsiveness.md">Class 4: Responsiveness</a>
+      <a href="class-5-weekly-project.md">Class 5: Weekly Project</a>
 
----
+      <a href="class-6-javascript.md">Class 6: Javascript</a>
+      <a href="class-7-DOM-manipulation.md">Class 7: DOM manipulation</a>
+      <a href="class-8-CSS-user-interactions.md"
+        >Class 8: CSS user interactions</a
+      >
+      <a href="class-9-user-interactivity.md">Class 9: User interactivity</a>
+      <a href="class-10-weekly-project.md">Class 10: Weekly Project</a>
 
-## Slide Decks
+      <a href="class-11-canvas.md">Class 11: Drawing canvas project</a>
+      <a href="class-12-canvas.md">Class 12: Drawing canvas project</a>
 
-- [Introduction to HTML](class-1-intro.md)
-- [CSS and Styling](deck2.md)
-- [JavaScript Basics](deck3.md)
+      <h2>Projects:</h2>
+      <a
+        href="https://palaogn.notion.site/Class-Project-1-Hello-world-5084dd87c0d3434d9b610e60c3f4450d?pvs=4"
+        >Class Project 1 - Hello World</a
+      >
+    </main>
 
----
-
-<footer>
-  <p>© 2024 My Presentation Collection</p>
-</footer>
-          </textarea>
-        </section>
-      </div>
-    </div>
-
-    <script src="./dist/reveal.js"></script>
-
-    <script src="./mermaid/dist/mermaid.min.js"></script>
-
-    <script src="./plugin/markdown/markdown.js"></script>
-    <script src="./plugin/highlight/highlight.js"></script>
-    <script src="./plugin/zoom/zoom.js"></script>
-    <script src="./plugin/notes/notes.js"></script>
-    <script src="./plugin/math/math.js"></script>
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
-      }
-
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        highlight: {
-          highlightOnLoad: false
-        },
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath
-        ]
-      };
-
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
-
-      var options = extend(defaultOptions, {"transition":"none","controls":true,"progress":true,"history":true,"center":true,"slideNumber":false,"_":["content/"],"static":"docs","static-dirs":"content/attachment","staticDirs":"content/attachment"}, queryOptions);
-    </script>
-
-
-    <script>
-      Reveal.initialize(options);
-      Reveal.addEventListener('ready', function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
-        const hlp = Reveal.getPlugin('highlight');
-        blocks.forEach(hlp.highlightBlock);
-      });
-    </script>
-
-    <script>
-      const mermaidOptions = extend({ startOnLoad: false }, {});
-      mermaid.startOnLoad = false;
-      mermaid.initialize(mermaidOptions);
-      const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
-    </script>
+    <footer>
+      <p>Harbour Space</p>
+      <p>Teacher: Pála Ögn Stefánsdóttir</p>
+    </footer>
   </body>
 </html>

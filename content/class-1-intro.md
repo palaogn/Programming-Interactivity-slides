@@ -5,8 +5,6 @@
 Programming Interactivity
 
  ----
- Pála Ögn Stefánsdóttir
- 21.October 2024
 
  Harbour Space
 
@@ -92,26 +90,23 @@ Software Developer at Gangverk
 "Digital product agency that specializes in driving digital transformation"
 
 
-
 <img src="attachment/gangverk_small_logo.png" style="height: 100px; display: block; margin-top: auto"/>
+
+
+Note: We work as consultant for companies and help them trough their digital journey. 
+</br>
+</br>
+We have software developers, designers, product specialists, and delivery leads. 
+</br>
+</br>
+And we have backend and frontend specialises as well as data engineers.
 </section>
-
-Note: We work as consultant for companies and help them trough their digital journey. We have software developers, designers, product specialists, and delivery leads. And we have backend and frontend specialises as well as data engineers.
-
 ---
-
-Our clients
-
-
-Note: We work for 
-
----
-
 
 
 <section data-background-video="https://videos.ctfassets.net/pbd11ft2v8bu/0KSkRS7hr9sf0q0HmnVxb/add0d0de56f673986da758a5127acfb6/Gangverk_Showreel_v4_Mobile.webm" data-background-video-loop data-background-video-muted>
 
-Note: this is examples of some of the work we have done.
+Note: this is examples of some of the work we have done for some of our cusotmers.
 
 ---
 
@@ -160,6 +155,19 @@ Have fun, learn more, enjoy life
 
 ---
 
+## Who are you?
+
+
+What is your name?
+
+What are you studying?
+
+Where are you from?
+
+What is your favorite thing to do in Barcelona?
+
+---
+
 ## 02/ Programming Interactivity
 
 ---
@@ -187,6 +195,14 @@ Programming Interactivity on the web
 - CSS
 - JavaScript
 - To apply interactive design
+
+---
+
+Each course starts at 9
+
+You are expected to show up
+
+Note: Each course start at 9. As school rules state if you are located in Barcelona you need to show up in class, otherwise its marked as an absence.
 
 ---
 

@@ -1,8 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <title>reveal-md</title>
     <link rel="shortcut icon" href="./favicon.ico" />
@@ -10,12 +13,15 @@
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
-
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-markdown data-separator="\n---\n" data-separator-vertical="\n---v\n">
+        <section
+          data-markdown
+          data-separator="\n---\n"
+          data-separator-vertical="\n---v\n"
+        >
           <textarea data-template>
             <link rel="stylesheet" href="styles.css">
 
@@ -47,7 +53,7 @@ Im your teacher
 
 03/ History of the web
 
-04/ Inspiration
+04/ Future interactivity
 
 05/ This week
 
@@ -61,7 +67,7 @@ Im your teacher
 ---
 
 
-I´m from Iceland 🇮🇸
+I'm from Iceland 🇮🇸
 
 ---
 
@@ -110,27 +116,19 @@ Software Developer at Gangverk
 
 "Digital product agency that specializes in driving digital transformation"
 
+Note: We work as consultant for companies and help them trough their digital journey. We have software developers, designers, product specialists, and delivery leads. And we have backend and frontend specialises as well as data engineers.
 
 
 <img src="attachment/gangverk_small_logo.png" style="height: 100px; display: block; margin-top: auto"/>
 </section>
 
-Note: We work as consultant for companies and help them trough their digital journey. We have software developers, designers, product specialists, and delivery leads. And we have backend and frontend specialises as well as data engineers.
 
 ---
-
-Our clients
-
-
-Note: We work for 
-
----
-
 
 
 <section data-background-video="https://videos.ctfassets.net/pbd11ft2v8bu/0KSkRS7hr9sf0q0HmnVxb/add0d0de56f673986da758a5127acfb6/Gangverk_Showreel_v4_Mobile.webm" data-background-video-loop data-background-video-muted>
 
-Note: this is examples of some of the work we have done.
+Note: Here is some examples of some of the work we have done for some of our clients
 
 ---
 
@@ -175,6 +173,9 @@ Have fun, learn more, enjoy life
 </br>
 
 </div>
+
+
+---
 
 
 ---
@@ -304,32 +305,48 @@ or the next React.
         progress: true,
         history: true,
         center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
+        transition: "default", // none/fade/slide/convex/concave/zoom
         slideNumber: true,
         highlight: {
-          highlightOnLoad: false
+          highlightOnLoad: false,
         },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
           RevealZoom,
           RevealNotes,
-          RevealMath
-        ]
+          RevealMath,
+        ],
       };
 
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"transition":"none","controls":true,"progress":true,"history":true,"center":true,"slideNumber":false,"_":["content/"],"static":"docs","static-dirs":"content/attachment","staticDirs":"content/attachment"}, queryOptions);
+      var options = extend(
+        defaultOptions,
+        {
+          transition: "none",
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+          slideNumber: false,
+          _: ["content/"],
+          static: "docs",
+          "static-dirs": "content/attachment",
+          staticDirs: "content/attachment",
+        },
+        queryOptions
+      );
     </script>
-
 
     <script>
       Reveal.initialize(options);
-      Reveal.addEventListener('ready', function (event) {
-        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
-        const hlp = Reveal.getPlugin('highlight');
+      Reveal.addEventListener("ready", function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll(
+          "pre code:not(.mermaid)"
+        );
+        const hlp = Reveal.getPlugin("highlight");
         blocks.forEach(hlp.highlightBlock);
       });
     </script>
@@ -339,11 +356,17 @@ or the next React.
       mermaid.startOnLoad = false;
       mermaid.initialize(mermaidOptions);
       const cb = function (event) {
-        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
-        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
-      }
-      Reveal.addEventListener('ready', cb);
-      Reveal.addEventListener('slidetransitionend', cb);
+        mermaid.init(
+          mermaidOptions,
+          ".stack.present > .present pre code.mermaid"
+        );
+        mermaid.init(
+          mermaidOptions,
+          ".slides > .present:not(.stack) pre code.mermaid"
+        );
+      };
+      Reveal.addEventListener("ready", cb);
+      Reveal.addEventListener("slidetransitionend", cb);
     </script>
   </body>
 </html>
