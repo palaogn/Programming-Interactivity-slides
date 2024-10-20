@@ -16,3 +16,13 @@
   <p class="fragment" data-fragment-index="1">First fragment</p>
   <p class="fragment" data-fragment-index="2">Second fragment</p>
 </section>
+
+
+# Syntax
+- `---` To seperate slides
+- `Note:` Speaker note
+- <!-- .slide: data-background="./image1.png" -->
+- 
+
+
+https://blog.hanklu.tw/use-reveal-md-to-generate-multiple-slides-and-host-them-on-github-page/
