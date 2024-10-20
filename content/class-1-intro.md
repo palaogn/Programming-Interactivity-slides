@@ -13,7 +13,7 @@ Programming Interactivity
 Hi 👋
 My name is Pála (Paula)
 
-Im your teacher
+I'm your teacher
 
 ---
 
@@ -40,7 +40,7 @@ Im your teacher
 ---
 
 
-I´m from Iceland 🇮🇸
+I'm from Iceland 🇮🇸
 
 <img src="attachment/c1/iceland_map.webp" height="600px"/>
 
@@ -531,7 +531,7 @@ But its interetsting, why are we using the same layout still today? is this the 
 
 ---
 
-### Airplain keyboard
+### Airplane keyboard
 
 <img src="attachment/c1/plane-keyboard.jpeg" />
 
@@ -573,7 +573,7 @@ Note:
 
 #### So that you can be the pioneers of the future of interactivity
 
-Lets learn how to program it and what material do we have to work with
+Let's learn how to program it and what material do we have to work with
 
 Note: By material in this concept I mean HTML, CSS, browsers, key inputs, keyboard, mouse, controls
 </br></br>
@@ -590,7 +590,7 @@ We can use that to change the flow of the web, we can change how things look, ma
 - Friday: Practical class for Weekly project 1
 
 
-Everyday we will have a Class project in the end of the class
+Every day we will have a Class project in the end of the class
 ---
 
 ## 06/ Excercise
