@@ -16,23 +16,23 @@ Harbour Space
 02/ Methodology
 03/ Layouts
 04/ Media queries
-05/ Weekly evaluation
+05/ CSS Grid
 
 ---
 
 ## RWD Basics
 
-----
+---
 
 ## Mobile Web Usage growing
 
-... statistics picture
+<img src="attachment/c4/mobile-web-growing.png" />
 
 ---
 
-## Responsive viewport
+### Responsive viewport
 
-```
+``` css
 <head>
 
 ...
@@ -42,25 +42,27 @@ Harbour Space
 
 ```
 
+Note: Responsive viewport
+
 ---
 
 ## Methodology
 
 ---
 
-## Screens
+### Screens
 
 ![devices](attachment/devices.png)
 
 ---
 
-## Screens
+### Screens
 
 ![devices plus watch](attachment/devices-watch.png)
 
 ---
 
-## Screens
+### Screens
 
 ![android vs ios sizes](attachment/android-ios-sizes.png)
 
@@ -78,7 +80,47 @@ Harbour Space
 
 ---
 
-? RWD side demo
+RWD side demo
+
+Note:
+- Lets look at some responsive sites
+
+---
+
+<img src="attachment/c4/start-small.png" />
+
+Note: 
+- It can be a good approach to start developing for a mobile page and then adjust when it gets bigger
+
+---
+
+<section data-background-image="attachment/c4/start-small1.png" data-background-size="cover">
+
+Note: Start small.
+
+---
+
+<section data-background-image="attachment/c4/start-small2.png" data-background-size="cover">
+
+Note: Increase the width
+
+---
+
+<section data-background-image="attachment/c4/start-small3.png" data-background-size="cover">
+
+Note: Identify problems
+
+---
+
+<section data-background-image="attachment/c4/start-small4.png" data-background-size="cover">
+
+Note: Add a breakpoint and fix it
+
+---
+
+<section data-background-image="attachment/c4/start-small5.png" data-background-size="cover">
+
+Note: Keep going
 
 ---
 
@@ -92,7 +134,7 @@ Great for flexible wrappers, to contain how far out they scale.
 
 ---
 
-## Mx width
+## Max width
 
 ``` CSS
 main { 
@@ -110,7 +152,7 @@ Great to specify grids and control flow of content on different viewport sizes
 
 ## Flexbox
 
-```
+``` css
 .container { 
     display: flex;
     justify-content: space-between;
@@ -130,13 +172,13 @@ Great to specify grids and control flow of content on different viewport sizes
 
 ## Media
 
-Add breakpoints to your CSS, at a certain  viewport width.
+Add breakpoints to your CSS, at a certain viewport width.
 
 ---
 
 ## Media
 
-```
+``` css
 @media (min-width: 600px) {
   
   

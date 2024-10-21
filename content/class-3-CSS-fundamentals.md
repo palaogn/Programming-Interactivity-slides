@@ -123,23 +123,23 @@ h1 {
 
 ---
 
-## TIP - Class selectors are the most common. Use element selector when possible
+## Class selectors are the most common. Use element selector when changing styles to all elements of that type
 
 ---
 
-## TIP - Avoid ID selectors as they're not reusable within a page. IDs also serve a functional purpose.
+## Only use ID selectors if you have a single element of that type. IDs also serve a functional purpose.
 
 ---
 
-## Combining selectors
+### Combining selectors
 
 How it's possible to combone selectors.
 
 ---
 
-## Combining selectors
+### Combining selectors
 
-```
+``` css
 /* style multiple elements at once */
 h1,
 h2,
@@ -148,6 +148,36 @@ h4 {
     color: blue;
 }
 ```
+
+Note:
+- This is how we can combine selectors
+
+---
+
+### Nested selectors
+
+``` css
+/* select h1 elements with .title class */
+h1.title {
+    color: blue;
+}
+
+/* select all anchors under p */
+p a {
+    color: blue;
+}
+
+/* select all direct childs of div */
+div > * {
+    color: blue;
+}
+
+```
+
+---
+
+### TIP for simplicity — 
+Avoid nested styles as it makes harder to read and reuse the CSS. Rather put classes on all elements that needs styling. 
 
 ---
 
@@ -159,7 +189,7 @@ Providing different states for elements
 
 ## Pseudo classes (on links)
 
-```
+``` css
 /* unvisited link */
 a:link {
   color: #FF0000;
@@ -187,7 +217,7 @@ a:active {
 
 ## Pseudo classes (on elements)
 
-```
+``` css
 /* generic styles */
 .item {
   width: 100px;
@@ -235,6 +265,8 @@ h1 {
 }
 ```
 
+Note: the later one will be selected
+
 ---
 
 ## Specificity
@@ -249,7 +281,7 @@ The selector with highest specificity wins.
 
 ## Specificity [1-9,3-5]
 
-```
+``` css
 <h1 id=“id” class=“title”>Heading 1</h1>
 
 .title { 
@@ -261,6 +293,8 @@ h1 {
 }
 ```
 
+Note: .title class will win because that has a higher specification.
+
 ---
 
 ## Inheritance
@@ -271,7 +305,7 @@ CSS property values set on parent elements are inherited by their child elements
 
 ## Inheritance
 
-```
+``` css
 body {
     color: blue;
 }
@@ -282,7 +316,7 @@ span {
 
 <p>As the body has been set to have a color of blue this is inherited through the descendants.</p>
 
-<p>We can change the color by targetting the element with a selector, such as this <span>span</span>.</p>
+<p>We can change the color by targetting the element with a selector, such as this <span>span</span></p>
 ```
 
 ---
@@ -295,25 +329,25 @@ span {
 
 ---
 
-... image
+<img src="attachment/pixels.png">
 
 ---
 
 ## Named colors
 
-```
+``` css
 h1 {
     color: hotpink;
 }
 ```
 
-... gif of all color names
+<img src="attachment/c1/css-colour-names.png">
 
 ---
 
 ## HEX colors
 
-```
+``` css
 h1 {
     color: #FF69B4;
 }
@@ -341,15 +375,18 @@ An absolute unit representing a "dot" on the display
 
 ---
 
+<img src="attachment/c2/pixel-single.png">
+
+---
+
 ## Pixels
 
-```
+``` css
 div {
   width: 400px;
   height: 400px;
 }
 ```
-
 ---
 
 ## Percentage
@@ -360,14 +397,14 @@ A unit relative to the width or height of it's parent container.
 
 ## Percentage
 
-```
+``` css
 div {
   width: 50%;
   height: 50%;
 }
 ```
 
-Relative to the size of the container
+Note: Relative to the size of the container
 
 ---
 
@@ -381,21 +418,23 @@ Relative to the size of the container
 
 ## Font family
 
-Specifies the font.
+<div style="text-align: left;">
 
-Includes fallback fonts in order after comma.
+- Specifies the font.
 
-See common font families
+- Includes fallback fonts in order after comma.
 
-Custom fonts are outside of th escope of this course, but you're free to dive into it by yourself.
+-See common font families
 
-Google fonts is an example library of free custom fonts.
+- Custom fonts are outside of th escope of this course, but you're free to dive into it by yourself.
+
+- Google fonts is an example library of free custom fonts.
 
 ---
 
 ## Font family
 
-```
+``` css
 h1 {
   font-family: Times New Roman, Georgia, serif;
   font-size: 20px;
@@ -411,7 +450,7 @@ h1 {
 
 ## Font size
 
-```
+``` css
 h1 {
   font-size: 36px;
 }
@@ -440,7 +479,7 @@ Examples:
 
 ## Font weight
 
-```
+``` css
 h1 {
   font-size: 36px;
   font-weight: bold;
@@ -472,7 +511,7 @@ h3 {
 
 ## Line height
 
-```
+``` css
 body {
 	line-height: 1.5;
 }
@@ -482,13 +521,16 @@ body {
 
 ## Set defaults on body
 
-```
+``` css
 body {
 	font-family: georgia, sans-serif;
 	font-size: 18px; // normal for <p>
 }
 ```
 
+Note:
+- Default styles you want to use across the whole page can be set to the body tag. 
+- As that should surround the whole content of the page.
 ---
 
 ## Backgrounds
@@ -497,7 +539,7 @@ body {
 
 ## Background color
 
-```
+``` css
 div {
   background-color: hotpink;
 }
@@ -507,7 +549,7 @@ div {
 
 ## Background image
 
-```
+``` css
 div {
   background-image: url('/myimage.jpg');
 }
@@ -521,13 +563,13 @@ div {
 
 ## Box Model
 
-![Box model](attachment/box_model.png)
+<img src="attachment/box_model.png" />
 
 ---
 
 ## Box Model Example
 
-```
+``` css
 div {
   width: 300px;
   height: 100px;
@@ -541,7 +583,7 @@ div {
 
 ## Long
 
-```
+``` css
 div { 
   width: 300px;
   height: 100px;
@@ -572,71 +614,32 @@ div {
 
 ## Short, long, longest
 
-```
-div {  /* all sides */
+``` css [1-4| ]
+div {  
   margin: 20px;
+  /* all sides */
 }
 
 div {
-  margin: 20px auto;   /* top/bottom left/right */
+  margin: 20px auto; 
+  /* top/bottom left/right */
 }
 
 div {
-  margin: 20px 30px 20px 30px;   /* top, right, bottom, left */
+  margin: 20px 30px 20px 30px;   
+  /* top, right, bottom, left */
 }
 ```
 
 ---
 
-## inline, inline-block, block
-
----
-
-## Inline
-
-```
-p {
-    display: inline;
-}
-```
-
-Adjusts to size of text
-
-Does not break into new line
-
----
-
-## inline-block
-
-```
-div {
-    display: inline-block;
-}
-```
-
-Allows to set width and height.
-
-Does not break into new line.
-
----
-
-## block
-
-```
-div {
-    display: block;
-}
-```
-
-Allows to set width and height
-
-Breaks int oa new line
+<img src="attachment/c2/inline-block-block.png">
 
 ---
 
 ## Recommended Defaults
 
-```
+``` css
 * {
 	margin: 0;
 	padding: 0;
