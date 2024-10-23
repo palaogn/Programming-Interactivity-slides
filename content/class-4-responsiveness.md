@@ -42,11 +42,9 @@ Note:
 
 ### RWD - Responsive Web design
 
-Responsive Web Design
+Responsive Web Design - by Ethan Marcotte 2010
 
-by Ethan Marcotte 2010
-
-<img src="attachment/c1/all_sizes.png" />
+<img src="attachment/c1/all_sizes.png" height="400px"/>
 
 Note: 
 - And after that the term Responsive Web Design was created in 2010.
@@ -200,6 +198,9 @@ Note: Keep going
 
 Great for flexible wrappers, to contain how far out they scale.
 
+Note:
+-
+
 ---
 
 ### Max width
@@ -210,6 +211,10 @@ main {
     width: 100%;
 }
 ```
+
+Note:
+- Is often used with width: 100%, as then the element takes all its space and then stops at some point
+- Would for example be used for form inputs as you generally dont want them to become too big
 
 ---
 
