@@ -16,3 +16,13 @@ Responsive page
 
 ---
 
+
+---
+
+## Weekly project 1 
+
+- Your own code!
+- I will ask questions about how it works
+- 
+
+- Use 
