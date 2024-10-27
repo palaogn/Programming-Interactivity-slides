@@ -12,6 +12,8 @@ Harbour Space
 
 ## Agenda
 
+<div style="text-align: left;">
+
 01/ Programming foundation
 
 02/ Variables
@@ -36,6 +38,9 @@ Harbour Space
 
 JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.
 
+Note: 
+- JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.
+
 ---
 
 ## Roles
@@ -49,14 +54,21 @@ How it looks.
 ***JAVASCRIPT***
 How it behaves.
 
+Note: 
+- And as we have gone over before. HTML is what it say
+- CSS is how it looks
+- Javascript is how it behaves
+
 ---
 
 ## Hello World
 
-```
+``` js
 const myHeading = document.querySelector('h1');
 myHeading.textContent = 'Hello world!';
 
+
+/* HTML */
 <h1>Text will show here!</h1>
 ```
 
@@ -72,11 +84,6 @@ myHeading.textContent = 'Hello world!';
 
 ## JavaScript -
 THe most popular programming language in the world.
-
----
-
-## JavaScript -
-The only programming language you can use for the web.
 
 ---
 
