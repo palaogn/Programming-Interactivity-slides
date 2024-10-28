@@ -14,7 +14,7 @@ Harbour Space
 
 01/ DOM elements
 
-02/ Selecting slemets
+02/ Selecting elements
 
 03/ Loops
 
