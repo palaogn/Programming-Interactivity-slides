@@ -1,6 +1,6 @@
-# Class 7
+# Class 8
 
-Javascript and DOM Elements
+DOM Manipulation
 
 Programming Interactivity
 
