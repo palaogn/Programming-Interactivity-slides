@@ -12,11 +12,11 @@ Harbour Space
 
 ## Agenda
 
+<div style="text-align: left;">
+
 01/ DOM elements
 
 02/ Selecting elements
-
-03/ Loops
 
 04/ Events
 
@@ -24,7 +24,7 @@ Harbour Space
 
 06/ Excercise
 
-----
+---
 
 ## 01/ DOM elements
 
@@ -32,11 +32,15 @@ Harbour Space
 
 ### DOM
 
+<div style="text-align: left;">
+
 The DOM stands for Document Object Model
 
 A tree of nodes created by the browser.
 
 Each has its own properties and methods which can be manipulated using Javascript.
+
+</div>
 
 Note: The DOM is the data structure representing the content, structure, and style of a document. It allows programs and scripts to dynamically access and update the content, structure, and style of documents.
 
@@ -48,9 +52,35 @@ Note: The DOM is the data structure representing the content, structure, and sty
 
 ---
 
-![alt text](attachment/DOM-tree.png)
+<img src="attachment/DOM-tree.png" width="600px" />
 
 Note: DOM Tree
+
+---
+Inspect elements shows live presentation of the DOM
+
+<img src="attachment/c7/inspect-dom.png" />
+
+Note:
+- If you go to Inspect in your browser and choose Elements
+- Then you are looking at the current DOM of your page
+- Its the current state your HTML is technically at, but it will contain everything that is displayed.
+- News page for example, will already have all the news page data displayed there.
+
+---
+
+### DOM manipulation
+
+<div style="text-align: left;">
+
+DOM manipulation refers to the process of interacting or modifying the DOM.
+
+- We can create element and append them
+
+- We can add event listeners to listen for actions
+
+- We can add/remove classes and chang styles
+</div>
 
 ---
 
@@ -60,7 +90,7 @@ Note: DOM Tree
 
 ## Selecting Elements
 
-Similar to CSS selectore, applied JavaScript.
+Similar to CSS selectors as we select by ***id***, ***class*** or html ***tag names***
 
 ---
 
@@ -68,42 +98,28 @@ Similar to CSS selectore, applied JavaScript.
 
 To select elements in the DOM, you can use various methods provided by the `document` object. Here are some common methods:
 
-- **`getElementById`**: Selects a single element by its ID.
-    ```javascript
-    const element = document.getElementById('myId');
-    ```
-
-- **`getElementsByClassName`**: Selects all elements with a specific class name.
-    ```javascript
-    const elements = document.getElementsByClassName('myClass');
-    ```
-
-- **`getElementsByTagName`**: Selects all elements with a specific tag name.
-    ```javascript
-    const elements = document.getElementsByTagName('div');
-    ```
-
-- **`querySelector`**: Selects the first element that matches a CSS selector.
-    ```javascript
-    const element = document.querySelector('.myClass');
-    ```
-
-- **`querySelectorAll`**: Selects all elements that match a CSS selector.
-    ```javascript
-    const elements = document.querySelectorAll('.myClass');
-    ```
-
-These methods allow you to access and manipulate DOM elements efficiently.
-
+``` js
+  // Selects a single element by its ID.
+  const element = document.getElementById('myId');
+  // Selects all elements with a specific class 
+  const elements = document.getElementsByClassName('myClass');
+  // Selects all elements with a specific tag name
+  const elements = document.getElementsByTagName('div');
+  // Selects the first element that matches a CSS selector
+  const element = document.querySelector('.myClass');
+  // Selects all elements that match a CSS selector
+  const elements = document.querySelectorAll('.myClass');
+```
 
 ---
 
-## getElementById
+## get Element By Id
 
-To select an element by its ID, you can use the `getElementById` method. Here is an example:
+To select an element by its ID, you can use the `getElementById` method.
 
 ```javascript
-// HTML: <div id="myId">Hello World</div>
+// HTML
+<div id="myId">Hello World</div>
 
 // JavaScript:
 let element = document.getElementById('myId');
@@ -115,25 +131,56 @@ This code selects the element with the ID `myId` and logs its text content to th
 
 ---
 
-## getElementById
+## get Element By Class Name
 
-To select an element by its ID, you can use the `getElementById` method. Here is an example:
+To select all elements with a specified class, you can use the `getElementByClassName` method.
 
-```javascript [1-5, 3-7]
-// HTML: <div id="myId"></div>
+``` js
+// HTML: 
+<div class="tile"></div>
+<div class="tile"></div>
 
 // JavaScript:
-let element = document.getElementById('myId');
-element.textContent = "Hello world!";
-
-// HTML: <div id="myId">Hello World</div>
+let elements = document.getElementByClassName('tile');
 ```
-
-This code selects the element with the ID `myId` and logs its text content to the console.
 
 ---
 
-## querySelectorAll
+## get Element By Tag Name
+
+To select all elements with a specified tag name, you can use the `getElementByTagName` method.
+
+``` js
+// HTML: 
+<p class="tile"></p>
+<p class="tile"></p>
+
+// JavaScript:
+let elements = document.getElementByTagName('p');
+```
+
+---
+
+## query Selector
+
+To select an element by a CSS selector, you can use the `querySelector` method. Selects the first element that matches a CSS selector.
+
+``` js
+// HTML: 
+<div id="myId" class="class-selector"></div>
+
+// JavaScript:
+let elementById = document.qerySelector('#myId');
+let elementByClass = document.qerySelector('.class-selector');
+```
+
+Note:
+- querySelector, selects the first element that matches a CSS selector.
+- here you can see it with an id and class selector
+
+---
+
+## query Selector All
 
 ``` javascript
 let tabs = document.querySelectorAll('.tab');
@@ -147,76 +194,6 @@ console.log(tabs.length); // Returns 3
 
 ---
 
-## 03/ Loops
-
----
-
-### Loops
-
-Loops execute a block of code a number of times.
-
-The most used one in JavaScript is the "for" loop.
-
----
-
-### For loop
-
-``` javascript
-for (let i = 0; i < 5; i++) {
-  // Runs 5 times  
-  console.log('Step number ' + (i+1));
-}
-```
-
-Note: 
-
----
-
-### Looping an array
-
-``` javascript
-let fruits = ['Orange', 'Apple', ...]
-
-for (let i = 0; i < cars.length; i++) {
-  // Runs for each item in the array
-  let fruits = fruits[i];
-  console.log('The car is ' + car);
-}
-```
-
----
-
-### Looping trough elements
-
-``` javascript
-let tabs = document.querySelectorAll('.tab')
-
-for (let i = 0; i < tabs.length; i++) {
-  let tab = tabs[i];
-  tab.innerHTML = 'Tab ' + (i+1);
-}
-```
-
----
-
-### Does the same as previous slide
-
-``` javascript
-let tabs = document.querySelectorAll('.tab')
-
-let tab1 = tabs[0]
-tab1.innerHTML = 'Tab 1'
-
-let tab2 = tabs[1]
-tab2.innerHTML = 'Tab 2'
-
-let tab3 = tabs[2]
-tab3.innerHTML = 'Tab 3'
-```
-
----
-
-
 ## 04/ Events
 
 ---
@@ -224,49 +201,33 @@ tab3.innerHTML = 'Tab 3'
 ### Events
 
 JavaScript's events are the way to handle in code when users interact with the site.
+
+<div style="text-align: left;">
+
 Examples:
 - Click
 - Scroll
 - Submit (a form)
-- Load (when page loads)
+- Mouseover
+- Keydown
+
+</div>
 
 
 ---
 ### Example event
 
-``` javascript
-let button = document.querySelector('.tab');
+``` js
+// HTML
+<button href="#tab1" id="tab-button">Tab 1</button>
 
-button.addEventListener('click', onButtonClick);
+// JavaScript
+let button = document.getElementById('tab-button');
 
-function onButtonClick () {
+button.addEventListener('click', () => {
   // Do something here
-}
-```
+});
 
-HTML
-``` html
-<button href="#tab1" class="tab">Tab 1</button>
-```
-
----
-
-### Preventing default behaviour
-
-``` javascript
-let button = document.querySelector('.tab');
-
-button.addEventListener('click', onButtonClick);
-
-function onButtonClick (e) {
-  // Do something here
-  e.preventDefault();
-}
-```
-
-HTML
-``` html
-<button href="#tab1" class="tab">Tab 1</button>
 ```
 
 ---
@@ -289,16 +250,58 @@ Examples:
 ### Adding a class
 
 ``` javascript
-tab.classList.add('active');
+let button = document.querySelector('.tab');
+
+button.classList.add('active');
 ```
 ---
 
 ### Removing a class
 
 ``` javascript
-tab.classList.remove('active');
+let button = document.querySelector('.tab');
+
+button.classList.remove('active');
 ```
 
+---
+
+### Creating an element
+
+``` js
+const tile = document.createElement(‘div’);
+
+const container = document.getElementById("container");
+container.append(tile);
+
+```
+---
+
+### Removing an element
+
+``` js
+
+const container = document.getElementById("container");
+container.remove();
+
+```
+
+---
+
+### Change innerText
+
+``` js
+const container = document.getElementById("container");
+constainer.innerText = "Hello!";
+```
+---
+
+### Change innerHTML
+
+``` js
+const container = document.getElementById("container");
+constainer.innerHTML = "<p>Hello!</p>";
+```
 ---
 
 ## 06/ Exercise
