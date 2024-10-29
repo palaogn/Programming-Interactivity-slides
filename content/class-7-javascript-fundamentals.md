@@ -176,8 +176,7 @@ Note:
 ### const
 
 ```
-const PI;
-PI = 3.14159265359;
+const PI = 3.14159265359;
 
 PI = 100; // NOT POSSIBLE!
 ```
@@ -206,13 +205,14 @@ Note:
 
 <div style="text-align: left;">
 
-- ***var*** is function-scoped, so it will only be limited to the function it’s in, even if it’s declared inside a block (like an if or for statement).
 
 - ***let*** and ***const*** are block-scoped, meaning they are restricted to the nearest block { } they’re declared in. This makes them safer to use in loops or conditions because they won’t accidentally "leak" into other parts of the code.
+
+- ***var*** is function-scoped, so it will only be limited to the function it’s in, even if it’s declared inside a block (like an if or for statement).
 
 Note:
-- ***var*** is function-scoped, so it will only be limited to the function it’s in, even if it’s declared inside a block (like an if or for statement).
 - ***let*** and ***const*** are block-scoped, meaning they are restricted to the nearest block { } they’re declared in. This makes them safer to use in loops or conditions because they won’t accidentally "leak" into other parts of the code.
+- ***var*** is function-scoped, so it will only be limited to the function it’s in, even if it’s declared inside a block (like an if or for statement).
 
 ---
 
