@@ -100,7 +100,7 @@ const canvasContext = canvas.getContext("2d");
 
 - We are going to look at "2d"
 
-- But there are also `webgl`, `webgl1`, `webgpu`, `bitmaprenderer`
+- But there are also `webgl`, `webgl2`, `webgpu`, `bitmaprenderer`
 
 Note:
 - Here is how we can get the canvas context, that provides us many methods to draw on the canvas. We are just going to use the "2d" canvas context.
@@ -118,14 +118,24 @@ Note:
 - ***moveTo(x, y)*** - moves the starting point for the path to the specified (x, y)
 - ***lineTo(x, y)*** - Draws a line from the current position to the (x, y) position
 
-- ***stroke()*** - Strokes (outlines) the path with the current stroke color
-- ***fill()*** - Fills the path with the current fill colors if it is closed
 
 Note:
 - the 2d context provides us these methods to draw lines.
 - beginPath - starts a new path, and should always be used at the start of a new shape. It will start a new path and effectively "reset" the current path so you can draw without connecting to the previous path.
 - moveTo - moves the starting point for the path to the specified coordinates
 - lineTo -  Draws a line from the current position to the (x, y) position
+
+---
+
+###  Line drawing methods
+
+<div style="text-align: left;">
+
+- ***stroke()*** - Strokes (outlines) the path with the current stroke color
+- ***fill()*** - Fills the path with the current fill colors if it is closed
+
+Note:
+
 - stroke - that outlines the path with the current stroke color, or basically draws up our line
 - fill - fills the path with the current fill colors, if its closed
 
@@ -137,7 +147,7 @@ Note:
 canvasContext.beginPath();
 canvasContext.moveTo(0, 0);
 canvasContext.lineTo(200, 100);
-stroke();
+canvasContext.stroke();
 ```
 
 <img src="attachment/c11/line.png">
@@ -157,15 +167,15 @@ Note:
 
 
 ``` js
-ctx.beginPath();
-ctx.moveTo(50, 150); // Start at (50,150)
-ctx.lineTo(150, 150); // Line to (150,150)
-ctx.lineTo(100, 50); // Line to (100,50)
-ctx.closePath(); // Closes path to form a triangle
+canvasContext.beginPath();
+canvasContext.moveTo(50, 150); // Start at (50,150)
+canvasContext.lineTo(150, 150); // Line to (150,150)
+canvasContext.lineTo(100, 50); // Line to (100,50)
+canvasContext.closePath(); // Closes path to form a triangle
 
-ctx.fillStyle = "green";
-ctx.fill(); // Fills the triangle
-ctx.stroke(); // Outlines the triangle
+canvasContext.fillStyle = "green";
+canvasContext.fill(); // Fills the triangle
+canvasContext.stroke(); // Outlines the triangle
 ```
 
 <img src="attachment/c11/triangle.png" height="200px" >
